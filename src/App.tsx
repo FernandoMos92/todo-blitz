@@ -1,9 +1,8 @@
-function App() {
-  return (
-    <div className="App">
+import React from 'react';
+import Login from './pages/Login';
 
-    </div>
-  );
+function App() {
+  return <Login />;
 }
 
 export default App;
