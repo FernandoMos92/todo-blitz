@@ -1,4 +1,5 @@
 import React from 'react'
+import './input.scss';
 
 interface Props {
   placeholder: string;
@@ -7,5 +8,9 @@ interface Props {
 
 export default function Input(props: Props) {
 
-  return <input {...props}/>
+  return (
+    <input
+      autoComplete="chrome-off"
+      {...props}
+    />)
 }

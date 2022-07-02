@@ -1,0 +1,70 @@
+.main-containet-form{
+  position: relative;
+}
+
+h1 {
+  font-family: 'Darker Grotesque', sans-serif;
+  position: absolute;
+  font-size: 48px;
+  top: 80px;
+  left: 0;
+  letter-spacing: 4px;
+  text-align: center;
+  width: 100%;
+  z-index: 1;
+}
+
+.icon-back-page {
+  fill: #ffb800;
+  font-size: 40px;
+  height: fit-content;
+  left: 20px;
+  padding: 15px;
+  position: absolute;
+  transition: all .2s ease-in-out;
+  top: 35px;
+  width: fit-content;
+  z-index: 2;
+}
+
+.icon-back-page:active {
+  transform:translateX(8px);
+}
+
+form {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: center;
+  position: relative;
+  height: 80vh;
+}
+
+.icon-register {
+  font-size: 30px;
+  fill: #ffb700a0;
+  position: absolute;
+  left: 58px;
+}
+
+.user-icon {
+  top: 180px;
+}
+
+.email-icon {
+  top: 255px;
+}
+
+.email-confirm-icon {
+  top: 322px;
+}
+
+.lock-icon,
+.lock-open-icon {
+  top: 390px;
+}
+
+.lock-bot-icon,
+.lock-open-bot-icon {
+  top: 460px;
+}

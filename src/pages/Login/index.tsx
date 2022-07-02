@@ -1,11 +1,10 @@
 import React, { useState } from 'react';
 import './Login.scss';
 import { BiUser } from 'react-icons/bi';
-import { BsFillEyeSlashFill } from 'react-icons/bs';
-import { IoEyeSharp } from 'react-icons/io5';
+import { GiPadlock, GiPadlockOpen } from 'react-icons/gi';
 
 export default function Login() {
-  const [isEyes, setIsEyes] = useState(false);
+  const [isLock, setIsLock] = useState(false);
 
   return (
     <div className='main-contianer-login'>
@@ -13,13 +12,13 @@ export default function Login() {
       <h2><span>To Do</span> List</h2>
       <BiUser className='user-icon icon-default' />
       {
-        isEyes ? <IoEyeSharp
+        isLock ? <GiPadlockOpen
           className='password-icon icon-default'
-          onClick={() => setIsEyes(!isEyes)}
+          onClick={() => setIsLock(!isLock)}
         /> :
-          <BsFillEyeSlashFill
+          <GiPadlock
             className='password-icon icon-default'
-            onClick={() => setIsEyes(!isEyes)}
+            onClick={() => setIsLock(!isLock)}
           />
       }
       <form>
@@ -28,7 +27,7 @@ export default function Login() {
           placeholder='email'
         />
         <input
-          type={!isEyes ? 'password' : 'text'}
+          type={!isLock ? 'password' : 'text'}
           placeholder='password'
         />
       </form>
