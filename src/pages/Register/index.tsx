@@ -5,14 +5,22 @@ import { BiUser } from 'react-icons/bi';
 import { AiOutlineMail } from 'react-icons/ai';
 import { GiPadlock, GiPadlockOpen } from 'react-icons/gi';
 import { IoIosArrowBack } from 'react-icons/io';
+import { RiQuestionnaireFill } from 'react-icons/ri';
+import QuestionRegister from '../../components/QuestionRegister';
 
 export default function Register() {
 
   const [isPassword, setIsPassword] = useState(false);
   const [isConfirm, setIsConfirm] = useState(false);
+  const [isButtonDisabled, setIsButtonDisabled] = useState(true);
 
-  return (
+  //CRIAR UM ESTADO GLOBAL PARA GERENCIAR A ABERTURA E FECHAMENTO DO MODAL!
+  const [isOpenModal, setIsOpenModal] = useState(false);
+
+
+  return isOpenModal ? <QuestionRegister /> : (
     <div className='main-containet-form'>
+      <RiQuestionnaireFill className='question-icon' />
       <h1>Welcome</h1>
       <IoIosArrowBack className='icon-back-page' />
       <form action="/form">
@@ -34,10 +42,15 @@ export default function Register() {
 
       <div className='container-button'>
         <button>Clear</button>
-        <button>Submit</button>
+        <button
+          disabled={isButtonDisabled}
+          style={isButtonDisabled ? { backgroundColor: "gray" } : { backgroundColor: "#ffb800" }}
+        >
+          Submit
+        </button>
       </div>
 
       <span className='tag-developer'>Mós - Web Developer</span>
-    </div>
+    </div >
   )
 }

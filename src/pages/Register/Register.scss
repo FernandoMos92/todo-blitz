@@ -3,6 +3,20 @@
   height: 100vh;
 }
 
+.question-icon {
+  fill: #ffb800;
+  font-size: 30px;
+  top: 20px;
+  right: 20px;
+  position: absolute;
+  z-index: 2;
+  transition: all .2s ease-in-out;
+}
+
+.question-icon:active {
+  transform: scale(.8);
+}
+
 h1 {
   font-family: 'Darker Grotesque', sans-serif;
   position: absolute;
@@ -76,7 +90,7 @@ form {
   flex-flow: row nowrap;
   position: absolute;
   justify-content: center;
-  bottom: 30%;
+  bottom: 25%;
   height: 90px;
   width: 100%;
 
