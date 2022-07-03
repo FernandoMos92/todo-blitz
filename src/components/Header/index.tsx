@@ -1,5 +1,6 @@
 import React from 'react';
 import './Header.scss';
+import { ImExit } from 'react-icons/im';
 
 export default function Header() {
   return (
@@ -8,7 +9,7 @@ export default function Header() {
         Welcome, <span>$USER</span>
       </span>
       <div className='container-image'>
-        <img src="https://picsum.photos/200/300" alt="Random picture" />
+        <ImExit className='icon-exit'/>
       </div>
     </header>
   )

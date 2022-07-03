@@ -1,0 +1,23 @@
+main {
+  align-items: center;
+  display: flex;
+  flex-flow: column nowrap;
+  height: 90vh;
+  justify-content: center;
+  position: relative;
+}
+
+h2, h3{
+  color: #ffb800;
+  letter-spacing: 2px;
+}
+
+h2{
+  position: absolute;
+  top: 110px;
+}
+
+h3 {
+  position: absolute;
+  top: 160px;
+}
