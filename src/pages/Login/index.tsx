@@ -5,6 +5,12 @@ import { GiPadlock, GiPadlockOpen } from 'react-icons/gi';
 
 export default function Login() {
   const [isLock, setIsLock] = useState(false);
+  const [inputEmail, setInputEmail] = useState("");
+
+  const handleInput = (target: any) => {
+    setInputEmail(target.value);
+    console.log(inputEmail)
+  }
 
   return (
     <div className='main-contianer-login'>
@@ -23,6 +29,8 @@ export default function Login() {
       }
       <form>
         <input
+          value={inputEmail}
+          onChange={handleInput}
           type="text"
           placeholder='email'
         />
